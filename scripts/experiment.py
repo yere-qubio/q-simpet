@@ -52,9 +52,7 @@ def simulate(cfg: DictConfig) -> None:
     test = simpet.SimPET(cfg)
     test.run()
 
-    cfg = OmegaConf.to_container(cfg)
-
-    save_cfg(cfg, config_path)
+    #save_cfg(cfg, config_path)
 
 
 if __name__ == "__main__":

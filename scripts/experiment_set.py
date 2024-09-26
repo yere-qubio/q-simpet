@@ -36,9 +36,11 @@ for subject, scanner in to_do_simulations:
         overrides=[
             f"dir_data_path={str(data)}",
             f"dir_results_path={str(results)}",
-            f"params/scanner={scanner}",
+            f"params/scanner=scanner_{subject}",
             f"params.patient_dirname='{subject}'",
             f"params.output_dir={subject}_{scanner}",
+            "params.scanner.savingInterval=5",
+            "params.scanner.numberOfIterations=100"
         ]
     )
 
